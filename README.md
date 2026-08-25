@@ -1,5 +1,26 @@
 # belajar_flutter
+# Belajar Flutter
 
+## Identitas Mahasiswa
+
+- Nama: Juwita Evalina Sitohang
+- NIM: [256151032]
+- Kelas: [3B]
+- Mata Kuliah: [Pemograman Perangkat Bergerak]
+- Dosen: [Fajerin Biabdillah, M. Kom.]
+
+## Deskripsi
+
+Project ini merupakan latihan Flutter yang dibuat untuk mempelajari
+dasar-dasar Flutter, menjalankan aplikasi, melakukan hot reload,
+debugging, serta penggunaan Git dan GitHub.
+
+## Fitur
+
+- Tampilan aplikasi Flutter
+- Counter/penghitung tombol
+- Hot reload
+- Penggunaan Git dan GitHub
 A new Flutter project.
 
 ## Getting Started
