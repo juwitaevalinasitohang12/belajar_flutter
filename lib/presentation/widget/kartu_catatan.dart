@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
+
 import '../../domain/entity/catatan.dart';
 
 class KartuCatatan extends StatelessWidget {
-  const KartuCatatan({
-    super.key,
-    required this.catatan,
-    required this.onKetuk,
-  });
+  const KartuCatatan({super.key, required this.catatan, required this.onKetuk});
 
   final Catatan catatan;
   final VoidCallback onKetuk;
@@ -34,8 +31,7 @@ class KartuCatatan extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
-                  if (catatan.disematkan)
-                    const Icon(Icons.push_pin, size: 18),
+                  if (catatan.disematkan) const Icon(Icons.push_pin, size: 18),
                 ],
               ),
               const SizedBox(height: 6),

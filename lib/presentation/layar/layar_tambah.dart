@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 import '../provider/daftar_catatan_notifier.dart';
 
 class LayarTambah extends ConsumerStatefulWidget {
@@ -27,10 +28,9 @@ class _LayarTambahState extends ConsumerState<LayarTambah> {
 
   void _simpan() {
     if (!_judulValid) return;
-    ref.read(daftarCatatanProvider.notifier).tambah(
-      _judulController.text,
-      _isiController.text,
-    );
+    ref
+        .read(daftarCatatanProvider.notifier)
+        .tambah(_judulController.text, _isiController.text);
     Navigator.of(context).pop();
   }
 

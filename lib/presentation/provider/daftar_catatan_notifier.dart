@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 import '../../domain/entity/catatan.dart';
 
 class CatatanRepository {
@@ -7,7 +8,6 @@ class CatatanRepository {
   List<Catatan> ambilSemua() => List.unmodifiable(_data);
 
   void tambah(Catatan catatan) => _data.add(catatan);
-
 
   void hapus(String id) => _data.removeWhere((c) => c.id == id);
 }
@@ -34,7 +34,8 @@ class DaftarCatatanNotifier extends Notifier<List<Catatan>> {
     state = state.where((c) => c.id != id).toList();
   }
 }
-  class daftar_catatan_notifier extends Notifier<List<Catatan>> {
+
+class daftar_catatan_notifier extends Notifier<List<Catatan>> {
   @override
   List<Catatan> build() {
     return ref.watch(catatanRepositoryProvider).ambilSemua();
@@ -57,7 +58,8 @@ class DaftarCatatanNotifier extends Notifier<List<Catatan>> {
     state = [catatan, ...state];
   }
 }
+
 final daftarCatatanProvider =
-NotifierProvider<daftar_catatan_notifier, List<Catatan>>(
-  daftar_catatan_notifier.new,
-);
+    NotifierProvider<daftar_catatan_notifier, List<Catatan>>(
+      daftar_catatan_notifier.new,
+    );

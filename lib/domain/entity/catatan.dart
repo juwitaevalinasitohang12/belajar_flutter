@@ -22,8 +22,7 @@ class Catatan {
     );
   }
 
-  bool get judulValid =>
-      judul.trim().isNotEmpty && judul.trim().length <= 80;
+  bool get judulValid => judul.trim().isNotEmpty && judul.trim().length <= 80;
 
   Catatan copyWith({String? judul, String? isi, bool? disematkan}) {
     return Catatan(
@@ -55,20 +54,18 @@ class Catatan {
     );
   }
 
-  String get ringkasan =>
-      isi.length <= 50 ? isi : '${isi.substring(0, 50)}...';
+  String get ringkasan => isi.length <= 50 ? isi : '${isi.substring(0, 50)}...';
 
-  bool get baruSaja =>
-      DateTime.now().difference(dibuatPada).inHours < 24;
+  bool get baruSaja => DateTime.now().difference(dibuatPada).inHours < 24;
 
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-          other is Catatan &&
-              other.id == id &&
-              other.judul == judul &&
-              other.isi == isi &&
-              other.disematkan == disematkan;
+      other is Catatan &&
+          other.id == id &&
+          other.judul == judul &&
+          other.isi == isi &&
+          other.disematkan == disematkan;
 
   @override
   int get hashCode => Object.hash(id, judul, isi, disematkan);

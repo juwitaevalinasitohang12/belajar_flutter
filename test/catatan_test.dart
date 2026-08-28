@@ -4,7 +4,10 @@ import 'package:belajar_flutter/domain/entity/catatan.dart';
 void main() {
   group('Pengujian Model Catatan', () {
     test('1. ringkasan mengembalikan teks isi catatan', () {
-      final c = Catatan.baru(judul: 'Tes', isi: 'Pemrograman Perangkat Bergerak');
+      final c = Catatan.baru(
+        judul: 'Tes',
+        isi: 'Pemrograman Perangkat Bergerak',
+      );
       expect(c.ringkasan, equals('Pemrograman Perangkat Bergerak'));
     });
 
